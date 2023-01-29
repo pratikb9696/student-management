@@ -28,4 +28,9 @@ public class StudentImpl implements StudentService {
     public List<Student> getAllStudents() {
         return repo.findAll();
     }
+
+    @Override
+    public Student getStudentByName(String name) {
+        return repo.findByName(name);
+    }
 }

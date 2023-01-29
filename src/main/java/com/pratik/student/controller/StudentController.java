@@ -32,4 +32,10 @@ public class StudentController {
         List<Student> allStudents=studentImpl.getAllStudents();
         return new ResponseEntity<>(allStudents,HttpStatus.OK);
     }
+
+    @GetMapping("/getStudent/{name}")
+    public ResponseEntity<Student> getStudentByName(@PathVariable String name){
+        Student student=studentImpl.getStudentByName(name);
+        return new ResponseEntity<>(student,HttpStatus.OK);
+    }
 }

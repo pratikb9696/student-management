@@ -11,4 +11,6 @@ public interface StudentService {
     public Student getStudent(long studentId);
 
     public List<Student> getAllStudents();
+
+    public Student getStudentByName(String name);
 }
